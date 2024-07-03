@@ -8,7 +8,9 @@ import (
 // A "dummy" is an object that is passed around but never actually used.
 
 // We define the Logger interface and two structs: RealLogger and DummyLogger.
-// The RealLogger provides a concrete implementation of the Log method, which logs the message using fmt.Println.
+
+// The RealLogger provides a concrete implementation of the Log method, which logs the message using log.Println.
+
 // The DummyLogger has an empty implementation of the Log method, which does nothing.
 
 type Logger interface {
