@@ -7,7 +7,7 @@ import (
 )
 
 // ----------------------------------------------------------------------------
-// A "mock" is an object that verifies the behaviour of the unit under test and defines expectations on how it should interact with its dependencies.
+// A "mock" object acts as a stand-in for a real dependency, and it helps you define and verify the expected interactions between the code you're testing and that dependency
 // ----------------------------------------------------------------------------
 
 // The MockEmailSender struct embeds the mock.Mock type from the github.com/stretchr/testify/mock package.
