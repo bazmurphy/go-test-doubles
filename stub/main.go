@@ -22,6 +22,9 @@ import "fmt"
 // Instead of relying on a real geocoding service, which might be slow or have external dependencies, we use a stub that returns hardcoded coordinates for known cities.
 // This allows us to test the behaviour of GetCityCoordinates in a controlled and predictable manner.
 
+// In real-world usage, you would typically use the RealGeoService (or any other concrete geocoding service implementation) to retrieve the actual coordinates.
+// The stub geo service is primarily used in testing or in situations where you want to control the behaviour of the geocoding service for specific inputs.
+
 type GeoService interface {
 	GetCoordinates(address string) (float64, float64)
 }
@@ -65,7 +68,4 @@ func main() {
 	stubGeoService := &StubGeoService{}
 	lat, lng = GetCityCoordinates(stubGeoService, city)
 	fmt.Printf("Stub GeoService - Coordinates for %s: (%.4f, %.4f)\n", city, lat, lng)
-
-	// In real-world usage, you would typically use the RealGeoService (or any other concrete geocoding service implementation) to retrieve the actual coordinates.
-	// The stub geo service is primarily used in testing or in situations where you want to control the behaviour of the geocoding service for specific inputs.
 }

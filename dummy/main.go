@@ -13,6 +13,9 @@ import (
 
 // The DummyLogger has an empty implementation of the Log method, which does nothing.
 
+// In real-world usage, you would typically use the RealLogger (or any other concrete logger implementation) to perform actual logging.
+// The dummy logger is primarily used in testing or in situations where logging is not required but the function expects a logger object.
+
 type Logger interface {
 	Log(message string)
 }
@@ -23,7 +26,7 @@ func (rl *RealLogger) Log(message string) {
 	log.Println("Real Logger:", message)
 }
 
-// this is "dummy" an object that is passed around but never used
+// this is the "dummy" an object that is passed around but never used
 type DummyLogger struct{}
 
 func (dl *DummyLogger) Log(message string) {}
@@ -50,7 +53,4 @@ func main() {
 	// using the dummy logger (! typically only used in the tests)
 	dummyLogger := &DummyLogger{}
 	ProcessData(data, dummyLogger)
-
-	// In real-world usage, you would typically use the RealLogger (or any other concrete logger implementation) to perform actual logging.
-	// The dummy logger is primarily used in testing or in situations where logging is not required but the function expects a logger object.
 }
