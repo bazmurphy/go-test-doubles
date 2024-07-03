@@ -6,6 +6,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// ----------------------------------------------------------------------------
+// A "spy" is a variation of a stub that also records information about how it was called.
+// ----------------------------------------------------------------------------
+
 // The SpyMessageBroker struct has a slice publishedMessages to store the messages that were published to it.
 
 // In the TestPublishMessage function, we create an instance of SpyMessageBroker called spyBroker.

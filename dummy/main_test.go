@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+// ----------------------------------------------------------------------------
+// A "dummy" is an object that is passed around but never actually used.
+// ----------------------------------------------------------------------------
+
 // TestProcessData tests the ProcessData function with both the real logger and the dummy logger.
 
 // The purpose of the dummy logger in this example is to satisfy the requirement of providing a logger object to the ProcessData function, even though the logger is not actually used within the function.

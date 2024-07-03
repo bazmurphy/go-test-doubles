@@ -1,6 +1,8 @@
 package main
 
+// ----------------------------------------------------------------------------
 // A "mock" is an object that verifies the behaviour of the unit under test and defines expectations on how it should interact with its dependencies.
+// ----------------------------------------------------------------------------
 
 // We define the EmailSender interface and a struct RealEmailSender.
 

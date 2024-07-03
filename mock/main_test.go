@@ -6,6 +6,10 @@ import (
 	"github.com/stretchr/testify/mock"
 )
 
+// ----------------------------------------------------------------------------
+// A "mock" is an object that verifies the behaviour of the unit under test and defines expectations on how it should interact with its dependencies.
+// ----------------------------------------------------------------------------
+
 // The MockEmailSender struct embeds the mock.Mock type from the github.com/stretchr/testify/mock package.
 // It defines the SendEmail method that records the arguments passed to it and returns the mocked error value.
 

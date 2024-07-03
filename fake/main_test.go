@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+// ----------------------------------------------------------------------------
+// A "fake" is a lightweight implementation of a real object that takes shortcuts to simplify its behaviour.
+// ----------------------------------------------------------------------------
+
 // TestSaveUserData tests the SaveUserData function with both the real database and the fake database.
 
 func TestSaveUserData(t *testing.T) {

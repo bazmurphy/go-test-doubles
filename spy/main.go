@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+// ----------------------------------------------------------------------------
+// A "spy" is a variation of a stub that also records information about how it was called.
+// ----------------------------------------------------------------------------
+
 // We define the MessageBroker interface and a struct RealMessageBroker.
 
 // The RealMessageBroker simulates publishing a message to a real message broker.

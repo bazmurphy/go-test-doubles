@@ -4,6 +4,10 @@ import (
 	"testing"
 )
 
+// ----------------------------------------------------------------------------
+// A "stub" is an object that provides predefined answers to method calls.
+// ----------------------------------------------------------------------------
+
 // TestGetCityCoordinates tests the GetCityCoordinates function with both the real geo service and the stub geo service.
 
 func TestGetCityCoordinates(t *testing.T) {

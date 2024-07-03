@@ -2,7 +2,9 @@ package main
 
 import "fmt"
 
+// ----------------------------------------------------------------------------
 // A "stub" is an object that provides predefined answers to method calls.
+// ----------------------------------------------------------------------------
 
 // We define the GeoService interface and two structs: RealGeoService and StubGeoService.
 

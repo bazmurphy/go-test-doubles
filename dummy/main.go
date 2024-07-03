@@ -5,7 +5,9 @@ import (
 	"log"
 )
 
+// ----------------------------------------------------------------------------
 // A "dummy" is an object that is passed around but never actually used.
+// ----------------------------------------------------------------------------
 
 // We define the Logger interface and two structs: RealLogger and DummyLogger.
 
