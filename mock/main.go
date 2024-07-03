@@ -28,7 +28,7 @@ type RealEmailSender struct{}
 
 func (s *RealEmailSender) SendEmail(recipient, subject, body string) error {
 	// simulating sending an email using a real email service
-	fmt.Printf("Sending email | recipient: %s | subject: %s | body: %s\n", recipient, subject, body)
+	fmt.Printf("sending real email | recipient: %s | subject: %s | body: %s\n", recipient, subject, body)
 	// in a real implementation, this would send the email using an actual email service
 	return nil
 }

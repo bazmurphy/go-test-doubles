@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/mock"
@@ -18,8 +19,11 @@ type MockEmailSender struct {
 }
 
 func (m *MockEmailSender) SendEmail(recipient, subject, body string) error {
-	args := m.Called(recipient, subject, body)
-	return args.Error(0)
+	fmt.Printf("sending mock email | recipient: %s | subject: %s | body: %s\n", recipient, subject, body)
+	mockArguments := m.Called(recipient, subject, body)
+	// fmt.Printf("DEBUG | MockEmailSender | SendEmail | mockArguments: %v\n", mockArguments)
+	// fmt.Printf("DEBUG | MockEmailSender | SendEmail | mockArguments.Error(0): %v\n", mockArguments.Error(0))
+	return mockArguments.Error(0)
 }
 
 // In the TestSendWelcomeEmail function, we create an instance of MockEmailSender and set up expectations using mockEmailSender.On("SendEmail", recipient, subject, body).Return(nil).
